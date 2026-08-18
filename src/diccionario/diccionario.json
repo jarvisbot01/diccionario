@@ -1,0 +1,61 @@
+{
+    "algoritmo": {
+        "palabra": "Algoritmo",
+        "definicion": "Conjunto ordenado y finito de instrucciones que permiten solucionar un problema o realizar una tarea.",
+        "categoria": "Programación",
+        "ejemplos": [
+            "El algoritmo de ordenamiento rápido es muy eficiente."
+        ],
+        "sinonimos": [
+            "procedimiento",
+            "método",
+            "fórmula"
+        ]
+    },
+    "api": {
+        "palabra": "API",
+        "definicion": "Interfaz de Programación de Aplicaciones; conjunto de definiciones y protocolos que se utiliza para desarrollar e integrar el software de las aplicaciones.",
+        "categoria": "Programación",
+        "ejemplos": [
+            "Consumimos la API de clima para mostrar la temperatura actual."
+        ],
+        "sinonimos": [
+            "interfaz",
+            "servicio web"
+        ]
+    },
+    "json": {
+        "palabra": "JSON",
+        "definicion": "JavaScript Object Notation; formato de texto ligero y legible para el intercambio de datos entre sistemas.",
+        "categoria": "Formatos de Datos",
+        "ejemplos": [
+            "Los datos de configuración se guardan en un archivo JSON."
+        ],
+        "sinonimos": [
+            "estructura de datos",
+            "formato de intercambio"
+        ]
+    },
+    "python": {
+        "palabra": "Python",
+        "definicion": "Lenguaje de programación de alto nivel, interpretado, con tipado dinámico y sintaxis clara.",
+        "categoria": "Programación",
+        "ejemplos": [
+            "Python es ampliamente utilizado en ciencia de datos e inteligencia artificial."
+        ],
+        "sinonimos": []
+    },
+    "resiliencia": {
+        "palabra": "Resiliencia",
+        "definicion": "Capacidad de adaptación y recuperación frente a un estado o situación adversa.",
+        "categoria": "General",
+        "ejemplos": [
+            "Demostró gran resiliencia para superar los desafíos del proyecto."
+        ],
+        "sinonimos": [
+            "fortaleza",
+            "adaptabilidad",
+            "tenacidad"
+        ]
+    }
+}

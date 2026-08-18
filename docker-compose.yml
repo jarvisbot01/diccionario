@@ -1,0 +1,8 @@
+services:
+  app:
+    image: ghcr.io/jarvisbot01/diccionario
+    container_name: diccionario-app
+    environment:
+      - PYTHONUNBUFFERED=1
+    stdin_open: true
+    tty: true
