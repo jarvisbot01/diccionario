@@ -35,5 +35,8 @@ RUN uv sync --frozen --no-dev
 # Añadir el entorno virtual al PATH
 ENV PATH="/app/.venv/bin:$PATH"
 
+# Entrada fija al gestor uv
+ENTRYPOINT ["uv"]
+
 # Comando por defecto para ejecutar la aplicación
-CMD ["diccionario"]
+CMD ["run", "diccionario"]
