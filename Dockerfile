@@ -1,5 +1,7 @@
 # syntax=docker/dockerfile:1
 FROM python:3.14-slim
+ARG HOST_USER_UID=1000
+ARG HOST_USER_GID=1000
 
 # Evitar prompts interactivos y buffers de Python
 ENV DEBIAN_FRONTEND=noninteractive \
@@ -21,6 +23,16 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 # Establecer directorio de trabajo
 WORKDIR /app
+
+# Crear usuario y grupo con el mismo UID/GID que el host
+RUN groupadd -g ${HOST_USER_GID} appgroup && \
+    useradd -u ${HOST_USER_UID} -g ${HOST_USER_GID} -m -s /sbin/nologin appuser
+
+# Establecer directorio de trabajo como propiedad del usuario no-root
+RUN chown -R appuser:appgroup /app
+
+# Cambiar al usuario non-root
+USER appuser
 
 # 1. Copiar manifiestos de dependencias e instalar dependencias (optimiza caché de capas)
 COPY pyproject.toml uv.lock README.md ./
