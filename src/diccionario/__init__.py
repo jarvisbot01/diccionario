@@ -12,7 +12,7 @@ def imprimir_termino(info: dict) -> None:
     ejemplos = info.get("ejemplos", [])
     sinonimos = info.get("sinonimos", [])
 
-    print(f"\n📖  \033[1;36m{palabra.upper()}\033[0m  [\033[33m{categoria}\033[0m]")
+    print(f"\n📖 \033[1;36m{palabra.upper()}\033[0m  [\033[33m{categoria}\033[0m]")
     print(f"    \033[1mDefinición:\033[0m {definicion}")
     if sinonimos:
         print(f"    \033[1mSinónimos:\033[0m {', '.join(sinonimos)}")
@@ -31,7 +31,7 @@ def menu_agregar(diccionario: DiccionarioJSON) -> None:
 
     existente = diccionario.buscar(palabra)
     if existente:
-        print(f"⚠️  El término '{palabra}' ya existe en el diccionario.")
+        print(f"⚠️ El término '{palabra}' ya existe en el diccionario.")
         return
 
     definicion = input("Definición: ").strip()
@@ -95,7 +95,7 @@ def menu_listar(diccionario: DiccionarioJSON) -> None:
     resultados = diccionario.listar(categoria=categoria_filtro)
 
     if not resultados:
-        print("ℹ️  No hay términos que coincidan con el criterio seleccionado.")
+        print("ℹ️ No hay términos que coincidan con el criterio seleccionado.")
         return
 
     print(f"\nTotal: {len(resultados)} término(s) encontrado(s)")
@@ -104,7 +104,7 @@ def menu_listar(diccionario: DiccionarioJSON) -> None:
 
 
 def menu_editar(diccionario: DiccionarioJSON) -> None:
-    print("\n--- ✏️  EDITAR TÉRMINO ---")
+    print("\n--- ✏️ EDITAR TÉRMINO ---")
     palabra = input("Palabra a editar: ").strip()
     actual = diccionario.buscar(palabra)
 
@@ -134,7 +134,7 @@ def menu_editar(diccionario: DiccionarioJSON) -> None:
 
 
 def menu_eliminar(diccionario: DiccionarioJSON) -> None:
-    print("\n--- 🗑️  ELIMINAR TÉRMINO ---")
+    print("\n--- 🗑️ ELIMINAR TÉRMINO ---")
     palabra = input("Palabra a eliminar: ").strip()
     actual = diccionario.buscar(palabra)
 
@@ -155,7 +155,7 @@ def menu_estadisticas(diccionario: DiccionarioJSON) -> None:
     print("\n--- 📊 ESTADÍSTICAS DEL DICCIONARIO ---")
     print(f"📁 Archivo de datos: {stats['archivo']}")
     print(f"📖 Total de palabras: {stats['total_palabras']}")
-    print(f"🏷️  Total de categorías: {stats['total_categorias']}")
+    print(f"🏷️ Total de categorías: {stats['total_categorias']}")
     print(f"📌 Lista de categorías: {', '.join(stats['categorias'])}")
 
 
@@ -170,8 +170,8 @@ def main() -> None:
             print("  1. 🔍 Buscar palabra")
             print("  2. ➕ Agregar nueva palabra")
             print("  3. 📚 Listar todas las palabras")
-            print("  4. ✏️  Editar palabra")
-            print("  5. 🗑️  Eliminar palabra")
+            print("  4. ✏️ Editar palabra")
+            print("  5. 🗑️ Eliminar palabra")
             print("  6. 📊 Ver estadísticas")
             print("  7. 🚪 Salir")
             print("=" * 45)
